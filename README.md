@@ -34,3 +34,8 @@ mysql> CREATE USER 'djangoadmin'@'localhost' IDENTIFIED WITH mysql_native_passwo
 mysql> CREATE DATABASE djangodatabase;
 mysql> GRANT ALL PRIVILEGES ON djangodatabase.* TO 'djangoadmin'@'localhost';
 ```
+
+3. Migrate database. Go to the directory of manage.py
+```
+python manage.py migrate
+```
