@@ -1,0 +1,52 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #ffd050;
+}
+
+.container {
+    padding:0 280px 0 280px;
+    }
+
+.imgcontainer {
+        text-align: center;
+        margin: 50px 0 0 0;
+        padding : 0;
+    }
+    
+img.logo {
+        width: 18%;
+    }
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    margin: 1.5rem;
+    font-size: 25px;}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 1em;
+    margin: 0.3rem 0 0.8rem 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+
+button {
+    background-color: rgb(64, 163, 64);
+    color: white;
+    margin-top: 0.8rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
