@@ -1,29 +1,19 @@
 # django-curd
 CURD system with django-python framework
 
-## 1. Start the virtual environtment
+## 1. Start the virtual environtment and manage dependencies
+In root project run
 ```
-cd curd/Scripts/
-```
-```
-activate
+dependencies.bat
 ```
 
-## 2. Install all requirements
-```bash
-pip install -r requirements.txt
-```
-
-## 3. MySQL Engine
+## 2. MySQL Engine (If found mysqlclient error)
 Get directory on root project
 
-```
-pip install mysqlclient-1.4.6-cp38-cp38-win32.whl
-```
 If you have version problem, find the exact wheel file with your version on 
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient
 
-## 4. Setting up the mysql user
+## 3. Setting up the mysql user
 1. Create user in mysql with same user-information in settings.py
 ```
 mysql> CREATE USER 'djangoadmin'@'localhost' IDENTIFIED WITH mysql_native_password BY '12345';
