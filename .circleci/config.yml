@@ -1,10 +1,22 @@
 version: 2.1
 
-orbs:
-  win: circleci/windows@2.3.0
-
 jobs:
   build:
-    executor: win/default
+    executor: python/default
     steps:
-      - pip show mysqlclient
+      - checkout
+      - python/load-cache
+      - python/install-deps
+      - python/save-cache
+      - run:
+          command: |
+            # pytest would be a dep in requirements.txt
+            pytest
+          name: Test
+orbs:
+  python: circleci/python@0.1
+version: 2.1
+workflows:
+  main:
+    jobs:
+      - build
