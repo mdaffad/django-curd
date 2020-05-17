@@ -9,4 +9,3 @@ jobs:
     steps:
       - checkout
       - run: dependencies.bat
-    executor:
