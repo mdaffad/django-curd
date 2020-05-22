@@ -28,4 +28,8 @@ Production:
   stage: production
   script:
     - pyinstaller --name=django-gitlab src/manage.py
+  tags:
+    - shell
+  only:
+    - master
 
