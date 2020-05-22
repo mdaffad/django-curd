@@ -1,0 +1,5 @@
+django
+PyInstaller
+pytest
+django-mysql
+mysqlclient
