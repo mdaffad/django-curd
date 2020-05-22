@@ -1,3 +1,4 @@
+sudo service mysql stop
 sudo apt-get -y install libmysqlclient-dev
 pip3 install virtualenv
 virtualenv venv
