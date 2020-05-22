@@ -30,7 +30,7 @@ Production:
   stage: production
   script:
     - source venv/bin/activate
-    - pyinstaller --name=django-gitlab src/manage.py
+    - pyinstaller --name=mysite src/manage.py
   tags:
     - shell
   only:
