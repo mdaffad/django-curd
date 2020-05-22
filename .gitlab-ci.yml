@@ -13,6 +13,7 @@ before_script:
 Build:
   stage: build
   script:
+    - source venv/bin/activate
     - python3 src/manage.py migrate
   tags:
     - shell
@@ -20,6 +21,7 @@ Build:
 Test:
   stage: test
   script:
+    - source venv/bin/activate
     - python3 src/manage.py test
   tags:
     - shell
@@ -27,9 +29,14 @@ Test:
 Production:
   stage: production
   script:
+    - source venv/bin/activate
     - pyinstaller --name=django-gitlab src/manage.py
   tags:
     - shell
   only:
     - master
+  artifacts:
+    paths:
+      - ci/deploy/
+
 
