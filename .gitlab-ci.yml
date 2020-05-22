@@ -14,8 +14,8 @@ before_script:
   - ./build.sh
 
 Build:
-  stage: Checking
+  stage: checking
   script:
-    - python3 manage.py migrate
+    - python3 src/manage.py migrate
   tags:
     - shell
