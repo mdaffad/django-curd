@@ -4,18 +4,32 @@ services:
 
 cache:
   paths:
-    - .cache/pip
     - venv/
 
 stages:
-  - checking
+  - build
+  - test
+  - production
 
 before_script:
   - ./build.sh
 
 Build:
-  stage: checking
+  stage: build
   script:
     - python3 src/manage.py migrate
   tags:
     - shell
+
+Test:
+  stage: test
+  script:
+    - python3 src/manage.py test
+  tags:
+    - shell
+
+Production:
+  stage: production
+  script:
+    - pyinstaller --name=django-gitlab src/manage.py
+
