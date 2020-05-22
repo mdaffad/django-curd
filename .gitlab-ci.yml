@@ -38,6 +38,6 @@ Production:
     - master
   artifacts:
     paths:
-      - ci/deploy/
+      - dist/mysite/
 
 
