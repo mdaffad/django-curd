@@ -32,13 +32,13 @@ Production:
   stage: production
   script:
     - source venv/bin/activate
-    - pyinstaller --name=mysite mysite/manage.py
+    - pyinstaller --name=siterunner mysite/manage.py
   tags:
     - shell
   only:
     - master
-  # artifacts:
-  #   paths:
-  #     - dist/mysite/
+  artifacts:
+    paths:
+      - dist/mysite/
 
 
