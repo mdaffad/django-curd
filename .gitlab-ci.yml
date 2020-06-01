@@ -32,7 +32,8 @@ Production:
   stage: production
   script:
     - source venv/bin/activate
-    - pyinstaller --name=siterunner mysite/manage.py
+    - cd mysite
+    - pyinstaller --name=siterunner manage.py
   tags:
     - shell
   only:
