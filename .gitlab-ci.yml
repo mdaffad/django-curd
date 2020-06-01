@@ -13,9 +13,10 @@ before_script:
 Build:
   stage: build
   script:
+    - ls
     - source venv/bin/activate
     - which python3
-    - python3 src/manage.py migrate
+    - python3 mysite/manage.py migrate
   tags:
     - shell
 
@@ -23,7 +24,7 @@ Test:
   stage: test
   script:
     - source venv/bin/activate
-    - python3 src/manage.py test
+    - python3 mysite/manage.py test
   tags:
     - shell
 
@@ -31,7 +32,7 @@ Production:
   stage: production
   script:
     - source venv/bin/activate
-    - pyinstaller --name=mysite src/manage.py
+    - pyinstaller --name=mysite mysite/manage.py
   tags:
     - shell
   only:
