@@ -4,7 +4,7 @@ services:
 
 stages:
   - build
-  - test
+  # - test
   - production
 
 before_script:
@@ -20,13 +20,13 @@ Build:
   tags:
     - shell
 
-Test:
-  stage: test
-  script:
-    - source venv/bin/activate
-    - python3 mysite/manage.py test
-  tags:
-    - shell
+# Test:
+#   stage: test
+#   script:
+#     - source venv/bin/activate
+#     - python3 mysite/manage.py test
+#   tags:
+#     - shell
 
 Production:
   stage: production
