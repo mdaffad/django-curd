@@ -1,0 +1,4 @@
+[fetch]
+	recurseSubmodules = false
+[http "https://gitlab.com"]
+	sslCAInfo = /home/mdaffad/Desktop/django-gitlab/builds/EEFZxoj2/0/mdaffad/django-gitlab.tmp/CI_SERVER_TLS_CA_FILE

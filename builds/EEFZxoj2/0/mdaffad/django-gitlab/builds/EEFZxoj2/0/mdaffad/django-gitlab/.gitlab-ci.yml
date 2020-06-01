@@ -1,0 +1,45 @@
+image: "python:3.7"
+services:
+  - mysql:5.7
+
+stages:
+  - build
+  - test
+  - production
+
+before_script:
+  - ./build.sh
+
+Build:
+  stage: build
+  script:
+    - ls
+    - source venv/bin/activate
+    - which python3
+    - python3 mysite/manage.py migrate
+  tags:
+    - shell
+
+Test:
+  stage: test
+  script:
+    - source venv/bin/activate
+    - python3 mysite/manage.py test
+  tags:
+    - shell
+
+Production:
+  stage: production
+  script:
+    - source venv/bin/activate
+    - cd mysite
+    - pyinstaller --name=siterunner manage.py
+  tags:
+    - shell
+  only:
+    - master
+  artifacts:
+    paths:
+      - dist/mysite/
+
+
