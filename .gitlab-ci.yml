@@ -37,8 +37,8 @@ Production:
     - shell
   only:
     - master
-  artifacts:
-    paths:
-      - dist/mysite/
+  # artifacts:
+  #   paths:
+  #     - dist/mysite/
 
 
